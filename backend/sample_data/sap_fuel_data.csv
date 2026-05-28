@@ -1,0 +1,16 @@
+plant_code,fuel_type,quantity,unit,date,cost_center,supplier
+PLT_001,Diesel,12500,liters,2026-01-15,CC_100,Shell
+PLT_001,Natural Gas,8500,m3,2026-01-15,CC_100,Engie
+PLT_002,Diesel,9800,liters,2026-02-01,CC_200,BP
+PLT_002,LPG,3200,kg,2026-02-01,CC_200,Total
+PLT_003,Natural Gas,15200,m3,2026-02-15,CC_300,Gazprom
+PLT_001,Diesel,11000,liters,2026-03-01,CC_100,Shell
+PLT_003,Diesel,-500,liters,2026-03-15,CC_300,BP
+PLT_004,Petrol,7600,liters,2026-04-01,CC_400,Chevron
+PLT_004,Natural Gas,,m3,2026-04-01,CC_400,
+PLT_001,Diesel,13200,liters,2026-05-01,CC_100,Shell
+PLT_002,LPG,2900,kg,2026-05-15,CC_200,Total
+PLT_005,Diesel,6300,,2026-06-01,CC_500,BP
+PLT_005,Petrol,4100,liters,31/06/2026,CC_500,Chevron
+PLT_003,Natural Gas,14800,m3,2026-06-15,CC_300,Engie
+PLT_001,Diesel,12500,liters,2026-01-15,CC_100,Shell

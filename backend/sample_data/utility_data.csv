@@ -1,0 +1,17 @@
+meter_id,meter_type,consumption,unit,billing_date,facility,provider
+MTR_001,electricity,45200,kWh,2026-01-31,HQ Building,National Grid
+MTR_002,natural_gas,12800,therms,2026-01-31,HQ Building,British Gas
+MTR_003,electricity,38900,kWh,2026-01-31,Warehouse A,EDF Energy
+MTR_001,electricity,42100,kWh,2026-02-28,HQ Building,National Grid
+MTR_002,natural_gas,11500,therms,2026-02-28,HQ Building,British Gas
+MTR_004,electricity,8900,kWh,2026-02-28,Office Branch B,SSE
+MTR_003,electricity,41200,kWh,2026-03-31,Warehouse A,EDF Energy
+MTR_001,electricity,39800,kWh,2026-03-31,HQ Building,National Grid
+MTR_005,water,2500,m3,2026-03-31,HQ Building,Thames Water
+MTR_002,natural_gas,-800,therms,2026-04-30,HQ Building,British Gas
+MTR_004,electricity,,kWh,2026-04-30,Office Branch B,SSE
+MTR_003,electricity,37500,kWh,2026-04-30,Warehouse A,EDF Energy
+MTR_001,electricity,44000,kWh,2026-05-31,HQ Building,National Grid
+MTR_006,natural_gas,9200,therms,,Data Center,Centrica
+MTR_005,water,2800,m3,2026-05-31,HQ Building,Thames Water
+MTR_001,electricity,45200,kWh,2026-01-31,HQ Building,National Grid

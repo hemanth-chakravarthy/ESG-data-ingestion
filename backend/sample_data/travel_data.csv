@@ -1,0 +1,31 @@
+employee_id,traveler_name,department,booking_type,origin,destination,departure_date,return_date,booking_class,hotel_nights,transport_vendor,currency,expense_amount
+EMP_1001,John Smith,Finance,flight,JFK,LHR,2026-03-02,2026-03-09,Business,,British Airways,USD,4200
+EMP_1001,John Smith,Finance,hotel,London,London,2026-03-02,2026-03-07,,5,Hilton,GBP,1100
+EMP_1022,Maria Chen,Engineering,flight,SFO,NRT,2026-03-15,2026-03-22,Economy,,ANA,USD,1850
+EMP_1022,Maria Chen,Engineering,hotel,Tokyo,Tokyo,2026-03-15,2026-03-22,,7,Marriott,JPY,168000
+EMP_2201,David Lee,Operations,rail,SFO,SJC,2026-04-01,2026-04-01,,0,Amtrak,USD,120
+EMP_2201,David Lee,Operations,taxi,SJC,SJC,2026-04-01,2026-04-01,,0,Uber,USD,45
+EMP_3310,Sarah Johnson,HR,flight,ORD,LAX,2026-04-10,2026-04-13,Business,,United Airlines,USD,1200
+EMP_3310,Sarah Johnson,HR,hotel,Los Angeles,Los Angeles,2026-04-10,2026-04-13,,3,Westin,USD,890
+EMP_4490,Aisha Khan,Sales,flight,DXB,BOM,2026-04-12,2026-04-16,Economy,,Emirates,USD,890
+EMP_4490,Aisha Khan,Sales,taxi,BOM,BOM,2026-04-16,2026-04-16,,0,Uber,INR,2100
+EMP_4490,Aisha Khan,Sales,hotel,Mumbai,Mumbai,2026-04-12,2026-04-16,,4,Taj Hotels,INR,42000
+EMP_5501,Robert Brown,Legal,flight,LHR,CDG,2026-05-01,2026-05-03,Business,,Air France,EUR,680
+EMP_5501,Robert Brown,Legal,taxi,CDG,CDG,2026-05-01,2026-05-01,,0,G7,EUR,55
+EMP_6612,Priya Patel,Marketing,flight,BLR,DEL,2026-05-05,2026-05-08,Economy,,IndiGo,INR,8500
+EMP_6612,Priya Patel,Marketing,hotel,Delhi,Delhi,2026-05-05,2026-05-08,,3,ITC Grand,INR,36000
+EMP_6612,Priya Patel,Marketing,flight,DEL,BLR,2026-05-08,,Economy,,IndiGo,INR,9200
+EMP_7723,Li Wei,R&D,flight,PVG,SFO,2026-05-10,2026-05-18,,0,China Eastern,USD,2800
+EMP_7723,Li Wei,R&D,hotel,San Francisco,San Francisco,2026-05-10,2026-05-18,,8,Hyatt,USD,2400
+EMP_8834,James Wilson,Finance,flight,NYC,LHR,2026-05-15,2026-05-20,Business,,Virgin Atlantic,USD,3900
+EMP_8834,James Wilson,Finance,taxi,,LHR,2026-05-15,,,0,,GBP,
+EMP_9945,Fatima Hassan,Operations,flight,JFK,FRA,2026-06-01,2026-06-05,Economy,,Lufthansa,USD,1450
+EMP_9945,Fatima Hassan,Operations,hotel,Frankfurt,Frankfurt,2026-06-01,2026-06-05,,4,Steigenberger,EUR,920
+EMP_1001,John Smith,Finance,flight,JFK,LHR,2026-03-02,2026-03-09,Business,,British Airways,USD,4200
+EMP_1102,Tom Anderson,Engineering,rail,London,Edinburgh,2026-06-10,2026-06-11,,0,LNER,GBP,145
+EMP_1102,Tom Anderson,Engineering,hotel,Edinburgh,Edinburgh,2026-06-10,2026-06-11,,1,Premier Inn,GBP,89
+EMP_1203,Ana Garcia,Sales,flight,MAD,BCN,15/06/2026,17/06/2026,Economy,,Iberia,EUR,220
+EMP_1203,Ana Garcia,Sales,hotel,Barcelona,Barcelona,15/06/2026,17/06/2026,,2,H10,EUR,380
+EMP_1304,Mark Taylor,Finance,flight,SYD,MEL,2026-06-20,2026-06-22,Economy,,Qantas,AUD,-150
+EMP_1304,Mark Taylor,Finance,taxi,MEL,MEL,2026-06-20,,,Uber,AUD,38
+EMP_1405,Nina Kowalski,HR,flight,WAW,AMS,2026-07-01,2026-07-04,Economy,,KLM,EUR,350

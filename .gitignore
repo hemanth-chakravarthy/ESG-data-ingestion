@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+*$py.class
+backend/venv/
+
+# Database
+backend/db.sqlite3
+
+# Local Uploads
+backend/uploads/
+
+# Environment configs
+backend/.env
+.env
+.env.local
+
+# IDEs & System Files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+#MD files
+*.md
+!README.md
+!DECISIONS.md
+!TRADEOFFS.md
+!SOURCES.md
+!MODEL.md
