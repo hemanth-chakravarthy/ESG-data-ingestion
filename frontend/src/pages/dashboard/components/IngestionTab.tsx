@@ -6,7 +6,8 @@ import {
   FileSpreadsheet, 
   FileText, 
   X, 
-  FolderOpen
+  FolderOpen,
+  Trash2
 } from 'lucide-react';
 import type { Batch } from '../types';
 
@@ -24,6 +25,7 @@ interface IngestionTabProps {
   handleFileChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   handleDragOver: (e: React.DragEvent) => void;
   handleDrop: (e: React.DragEvent) => void;
+  onDeleteBatch: (batchId: string) => Promise<void>;
 }
 
 export default function IngestionTab({
@@ -40,6 +42,7 @@ export default function IngestionTab({
   handleFileChange,
   handleDragOver,
   handleDrop,
+  onDeleteBatch,
 }: IngestionTabProps) {
   return (
     <div className="ingestion-layout">
@@ -155,6 +158,7 @@ export default function IngestionTab({
                   <th>Total Rows</th>
                   <th>Uploaded By</th>
                   <th>Date</th>
+                  <th style={{ textAlign: 'right' }}>Actions</th>
                 </tr>
               </thead>
               <tbody>
@@ -176,6 +180,28 @@ export default function IngestionTab({
                     <td>{batch.total_rows} rows</td>
                     <td>{batch.uploaded_by_email}</td>
                     <td>{new Date(batch.created_at).toLocaleString()}</td>
+                    <td style={{ textAlign: 'right' }}>
+                      <button
+                        onClick={() => onDeleteBatch(batch.id)}
+                        disabled={batch.status === 'PROCESSING'}
+                        className="delete-batch-btn"
+                        title="Delete this ingestion batch"
+                        style={{
+                          background: 'none',
+                          border: 'none',
+                          color: batch.status === 'PROCESSING' ? 'var(--text-muted)' : 'var(--error)',
+                          cursor: batch.status === 'PROCESSING' ? 'not-allowed' : 'pointer',
+                          padding: '4px',
+                          borderRadius: '4px',
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          transition: 'all 0.2s ease',
+                        }}
+                      >
+                        <Trash2 size={16} />
+                      </button>
+                    </td>
                   </tr>
                 ))}
               </tbody>
@@ -186,3 +212,4 @@ export default function IngestionTab({
     </div>
   );
 }
+

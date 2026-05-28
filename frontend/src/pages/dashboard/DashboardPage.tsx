@@ -298,6 +298,24 @@ export default function DashboardPage() {
     }
   };
 
+  const handleDeleteBatch = async (batchId: string) => {
+    const confirmed = window.confirm(
+      'Are you sure you want to delete this ingestion batch? All raw/normalized records and review flags associated with it will be permanently deleted.'
+    );
+    if (!confirmed) return;
+
+    try {
+      await api.delete(`/uploads/${batchId}/`);
+      // Refresh local states
+      fetchBatches();
+      fetchStats();
+      fetchRecords();
+      fetchAuditLogs();
+    } catch (err: any) {
+      alert(err.response?.data?.detail || 'Failed to delete batch.');
+    }
+  };
+
   // ──────────────────────────────────────────────
   // Handlers – Review Queue & Actions
   // ──────────────────────────────────────────────
@@ -600,6 +618,7 @@ export default function DashboardPage() {
               handleFileChange={handleFileChange}
               handleDragOver={handleDragOver}
               handleDrop={handleDrop}
+              onDeleteBatch={handleDeleteBatch}
             />
           )}
           {activeTab === 'review' && (

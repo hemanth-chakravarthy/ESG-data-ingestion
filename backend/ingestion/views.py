@@ -88,10 +88,10 @@ def list_batches(request):
     return Response(UploadBatchListSerializer(batches, many=True).data)
 
 
-@api_view(['GET'])
+@api_view(['GET', 'DELETE'])
 @permission_classes([IsAuthenticated])
 def batch_detail(request, batch_id):
-    """Get details for a specific batch."""
+    """Get details for a specific batch or delete it."""
     try:
         batch = UploadBatch.objects.get(
             id=batch_id,
@@ -100,10 +100,15 @@ def batch_detail(request, batch_id):
     except UploadBatch.DoesNotExist:
         return Response({'detail': 'Batch not found.'}, status=status.HTTP_404_NOT_FOUND)
 
+    if request.method == 'DELETE':
+        batch.delete()
+        return Response({'detail': 'Batch deleted successfully.'}, status=status.HTTP_204_NO_CONTENT)
+
     data = UploadBatchSerializer(batch).data
     data['records_count'] = NormalizedRecord.objects.filter(raw_record__batch=batch).count()
     data['flags_count'] = ReviewFlag.objects.filter(record__raw_record__batch=batch, resolved=False).count()
     return Response(data)
+
 
 
 # ──────────────────────────────────────────────
